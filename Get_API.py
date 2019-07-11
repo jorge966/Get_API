@@ -83,13 +83,13 @@ def data_source(tag) -> list:
     # Create a URL safe string
     qstr = quote(tag)
     # Create the request URL for the specified tag
-    url = "https://hatchways.io/api/assessment/blog/posts?tag=" + qstr
-    looper = loop.run_until_complete(Get_request(url)).json()
+    url = "third party url here, they wanted it to not be made public" + qstr
+    #looper = loop.run_until_complete(Get_request(url)).json()
 
     # Convert response to a JSON object
-    #response = requests.get(url).json()
+    response = requests.get(url).json()
     # Return the ONLY the list of posts
-    return looper
+    return response['POST']
 
 # Sorts all posts in a given list by specified sortBy and direction parameters
 def sort_data_by_filter(data, sortBy, direction) -> list:
